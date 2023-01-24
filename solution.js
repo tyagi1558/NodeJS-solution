@@ -25,8 +25,11 @@ let users = [{id:1, name: 'John', email:'john@example.com', age:30, city: 'NewYo
 //function called
 let res = getUserInState(users, 'NY');
 
-//print lsit of users
-console.log(res);
+// sorted the list
+let sortedList = res.sort((p1, p2) => (p1.age > p2.age) ? 1 : (p1.age < p2.age) ? -1 : 0);
 
-let averageAge = avgAge(res);
+//print lsit of users
+console.log(sortedList);
+
+let averageAge = avgAge(sortedList);
 console.log('averageAge:'+averageAge);
